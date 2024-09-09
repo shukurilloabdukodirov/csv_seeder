@@ -1,0 +1,247 @@
+models:
+#  Domain/Assessment/Entities/SeaCategoryGroup:
+#    title_uz: text
+#    title_en: text
+#    title_ru: text
+#    description_uz: text
+#    description_en: text
+#    description_ru: text
+#    content_uz: text
+#    content_en: text
+#    content_ru: text
+#    parent_id: id foreign:sea_category_groups.id
+#    status: boolean
+#    order: integer
+#    timestamps
+#--------------------------------////////\\\\\\\\--------------------------------------
+#  Domain/Assessment/Entities/SeaCategory:
+#    title_uz: text
+#    title_en: text
+#    title_ru: text
+#    description_uz: text
+#    description_en: text
+#    description_ru: text
+#    content_uz: text
+#    content_en: text
+#    content_ru: text
+#    parent_id: id foreign:sea_category_groups.id
+#    status: boolean
+#    order: integer
+#    timestamps
+#--------------------------------////////\\\\\\\\--------------------------------------
+#  Domain/Assessment/Entities/SeaQuestion:
+#    title_uz: text
+#    title_en: text
+#    title_ru: text
+#    prompt_uz: text
+#    prompt_en: text
+#    prompt_ru: text
+#    is_multiple: boolean
+#    question_type: enum
+#    category_id: id foreign:sea_categories.id
+#    status: boolean
+#    order: integer
+#    timestamps
+#
+#  Domain/Assessment/Entities/SeaQuestionAnswer:
+#    title_uz: text
+#    title_en: text
+#    title_ru: text
+#    info_uz: string
+#    info_en: string
+#    info_ru: string
+#    violation_uz: text
+#    violation_en: text
+#    violation_ru: text
+#    recommendation_uz: text
+#    recommendation_en: text
+#    recommendation_ru: text
+#    question_id: id foreign:sea_questions.id
+#    status: boolean
+#    order: integer
+#    timestamps
+#--------------------------------////////\\\\\\\\--------------------------------------
+#  Domain/Assessment/Entities/SeaScenario:
+#    group_id: id foreign:sea_categories.id
+#  Domain/Assessment/Entities/SeaScenarioStep:
+#    name: enum:start,process,end
+#    scenario_id: id foreign:sea_scenarios.id
+#    scenario_index: string:255 index
+#    question_id: id foreign:sea_questions.id
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Resource/Entities/ResourceRegion:
+#    name_uz: string:255
+#    name_en: string:255
+#    name_ru: string:255
+#    soato_id: integer
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Resource/Entities/ResourceCity:
+#    name_uz: string:255
+#    name_en: string:255
+#    name_ru: string:255
+#    soato_id: integer
+#    region_soato_id: id foreign:resource_regions.soato_id
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Core/Entities/CoreLibraryTag:
+#    title_uz: string:255
+#    title_en: string:255
+#    title_ru: string:255
+#    type_of_use: enum:employer,employee
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Core/Entities/CoreInspectionInfo:
+#    region_id: id foreign:resource_regions.soato_id
+#    city_id: id foreign:resource_cities.soato_id
+#    address: string:255
+#    name_legal: string:255 index
+#    phone: text
+#    lat: double
+#    long: double
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Core/Entities/CoreInspectorInfo:
+#    image_url: string:255
+#    fullname_uz: string:255
+#    fullname_ru: string:255
+#    fullname_en: string:255
+#    phone: string
+#    admission_days_uz: text
+#    admission_days_ru: text
+#    admission_days_en: text
+#    user_id: id foreign:users.id
+#    inspection_id: id foreign:core_inspection_infos.id
+#    status: boolean
+#    order: integer
+#    timestamps
+#
+#  Domain/Appeal/Entities/Application:
+#    type: enum:employer,employee
+#    passport_serial: text
+#    pin: text
+#    phone: text
+#    inspection_id: id foreign:core_inspection_infos.id
+#    appeal_text: text
+#    document_url: string:255
+#    user_id: id foreign:users.id nullable
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Appeal/Entities/EnrolInspector:
+#    type: enum:zoom,offline
+#    first_name: text
+#    last_name: text
+#    patronimic: text
+#    address: text
+#    passport_serial: text
+#    pin: text
+#    phone: text
+#    inspection_id: id foreign:core_inspection_infos.id
+#    problem_id: id foreign:core_library_tags.id
+#    appeal_text: text
+#    document_url: string:255
+#    planned_date: datetime
+#    planned_time: integer
+#    user_id: id foreign:users.id nullable
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Appeal/Entities/RateInspector:
+#    user_id: id foreign:users.id
+#    inspector_id: id foreign:core_inspector_infos.id
+#    comment_text: text
+#    status: boolean
+#    order: integer
+#    timestamps
+
+#  Domain/Library/Entities/LibCategoryGroup:
+#    title_uz: string:255 nullable
+#    title_en: string:255 nullable
+#    title_ru: string:255 nullable
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Library/Entities/LibCategory:
+#    title_uz: string:255 nullable
+#    title_en: string:255 nullable
+#    title_ru: string:255 nullable
+#    lib_category_group_id: id foreign:lib_category_groups.id
+#    core_library_tag_id: id foreign:core_library_tags.id
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Library/Entities/LibCategoryItem:
+#    title_uz: string:255 nullable
+#    title_en: string:255 nullable
+#    title_ru: string:255 nullable
+#    lib_category_id: id foreign:lib_categories.id
+#    status: boolean
+#    order: integer
+#    timestamps
+#  Domain/Library/Entities/LibCategoryItemValue:
+#    title_uz: string:255 nullable
+#    title_en: string:255 nullable
+#    title_ru: string:255 nullable
+#    content_uz: text nullable
+#    content_en: text nullable
+#    content_ru: text nullable
+#    image_url: string:255 nullable
+#    document_url: string:255 nullable
+#    lib_category_item_id: id foreign:lib_category_item.id
+#    status: boolean
+#    order: integer
+#    timestamps
+#--------------------------------////////\\\\\\\\--------------------------------------
+  Domain/Assessment/Entities/SeaUserAssessment:
+    state: enum:new,start,process,end
+    status: integer
+    user_id: id foreign:users:id
+  Domain/Assessment/Entities/SeaUserAssessmentQuestion:
+    sea_user_assessment_id: id foreign:sea_user_assessments:id
+    sea_question_id: id foreign:sea_questions:id
+  Domain/Assessment/Entities/SeaUserAssessmentQuestionAnswer:
+    sea_user_assessment_question_id: id foreign:sea_user_assessment_questions:id
+    sea_question_answer_id: id foreign:sea_question_answers:id
+
+controllers:
+#  Dashboard/SeaCategoryGroup:
+#    resource: api
+#  Dashboard/SeaCategory:
+#    resource: api
+
+#  Dashboard/SeaQuestion:
+#    resource: api
+#  Dashboard/SeaQuestionAnswer:
+#    resource: api
+#  Dashboard/SeaScenario:
+#    resource: api
+#  Dashboard/SeaScenarioStep:
+#    resource: api
+
+#  Dashboard/Core/CoreLibraryTag:
+#    resource: api
+#  Dashboard/Core/CoreInspectionInfo:
+#    resource: api
+#  Dashboard/Core/CoreInspectorInfo:
+#    resource: api
+#  Dashboard/Appeal/AppealApplication:
+#    resource: api
+#  Dashboard/Appeal/AppealEnrolInspector:
+#    resource: api
+#  Dashboard/Appeal/AppealRateInspector:
+#    resource: api
+#  Dashboard/Library/LibCategoryGroup:
+#    resource: api
+#  Dashboard/Library/LibCategory:
+#    resource: api
+#  Dashboard/Library/LibCategoryItem:
+#    resource: api
+#  Dashboard/Library/LibCategoryItemValue:
+#    resource: api

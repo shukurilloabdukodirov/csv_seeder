@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "c3cec6e3-8d93-4eca-8828-6f4744a99e3c",
+		"name": "Weather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8374455",
+		"_collection_link": "https://lively-firefly-918853.postman.co/workspace/Team-Workspace~5efdf0d2-25e8-49ef-8b33-ea7388f08195/collection/8374455-c3cec6e3-8d93-4eca-8828-6f4744a99e3c?action=share&source=collection_link&creator=8374455"
+	},
+	"item": [
+		{
+			"name": "OpenMap",
+			"item": [
+				{
+					"name": "geolocation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/geo/1.0/direct?q=Tashkent&limit=5&appid=5e473ef913ec8680a971b631a7ddf81b",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"geo",
+								"1.0",
+								"direct"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Tashkent"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "appid",
+									"value": "5e473ef913ec8680a971b631a7ddf81b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AccuWeather",
+			"item": [
+				{
+					"name": "locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/topcities/150?apikey=CosrtQAGqyHUYcvSjexAcmA3fYHIh2cl",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"topcities",
+								"150"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "CosrtQAGqyHUYcvSjexAcmA3fYHIh2cl"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "accu-current-weather",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "w.loc/api/weather/accu-weather/current-weather?name=Tashkent",
+					"host": [
+						"w",
+						"loc"
+					],
+					"path": [
+						"api",
+						"weather",
+						"accu-weather",
+						"current-weather"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Tashkent"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "open-current-weather",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "w.loc/api/weather/open-weather-map/current-weather?name=Tashkent",
+					"host": [
+						"w",
+						"loc"
+					],
+					"path": [
+						"api",
+						"weather",
+						"open-weather-map",
+						"current-weather"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Tashkent"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

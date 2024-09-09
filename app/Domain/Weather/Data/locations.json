@@ -1,0 +1,26 @@
+[
+    {
+        "Key": "351199",
+        "EnglishName": "Tashkent",
+        "lat": 41.3123363,
+        "lon": 69.2787079
+    },
+    {
+        "Key": "328328",
+        "EnglishName": "London",
+        "lat": 41.3123363,
+        "lon": 69.2787079
+    },
+    {
+        "Key": "294021",
+        "EnglishName": "Moscow",
+        "lat": 55.7504461,
+        "lon": 37.6174943
+    },
+    {
+        "Key": "222343",
+        "EnglishName": "Astana",
+        "lat": 51.1282205,
+        "lon": 71.4306682
+    }
+]
