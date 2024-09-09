@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Utils;
-
+/**
+ * The CsvParser class provides functionality to parse a CSV file,
+ * retrieve headers, data, and failed rows where data is invalid.
+ */
 class CsvParser
 {
     public string $filePath = '';

@@ -7,6 +7,9 @@ use App\Utils\CsvParser;
 use Exception;
 use Illuminate\Console\Command;
 
+/**
+ * The ImportData class is responsible for handling console commands for importing data from csv file.
+ */
 class ImportData extends Command
 {
     protected ParserService $parserService;
