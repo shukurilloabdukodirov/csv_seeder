@@ -7,7 +7,9 @@ use App\Utils\CsvParser;
 use Exception;
 use PHPUnit\Framework\TestCase;
 use Mockery;
-
+/**
+ * The ParserServiceTest class is responsible for testing ParserService class methods.
+ */
 class ParserServiceTest extends TestCase
 {
 

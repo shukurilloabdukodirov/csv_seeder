@@ -3,7 +3,9 @@
 namespace Tests\Unit;
 use App\Utils\CsvParser;
 use PHPUnit\Framework\TestCase;
-
+/**
+ * The ParserService class is responsible for testing CsvParser class methods.
+ */
 class CsvParserTest extends TestCase
 {
     /**
