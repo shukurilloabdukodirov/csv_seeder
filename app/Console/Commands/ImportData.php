@@ -18,10 +18,11 @@ class ImportData extends Command
     protected $signature = 'import:stock { mode? }';
     protected $description = 'Import stock from a CSV file';
 
+
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return bool
      * @throws Exception
      */
     public function handle(): bool
