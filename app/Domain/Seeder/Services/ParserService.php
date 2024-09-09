@@ -7,6 +7,12 @@ use App\Utils\CsvParser;
 use Carbon\Carbon;
 use Exception;
 
+
+/**
+ * The ParserService class is responsible for parsing CSV data, preparing products for import.
+ * Importing products into the database.
+ * It also validates the product data based on stock levels, price range, and encoding.
+ */
 class ParserService
 {
     public CsvParser $parser;

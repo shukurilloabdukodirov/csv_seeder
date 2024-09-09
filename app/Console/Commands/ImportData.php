@@ -7,6 +7,9 @@ use App\Utils\CsvParser;
 use Exception;
 use Illuminate\Console\Command;
 
+/**
+ * The ImportData class is responsible for handling console commands for importing data from csv file.
+ */
 class ImportData extends Command
 {
     protected ParserService $parserService;
@@ -18,10 +21,11 @@ class ImportData extends Command
     protected $signature = 'import:stock { mode? }';
     protected $description = 'Import stock from a CSV file';
 
+
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return bool
      * @throws Exception
      */
     public function handle(): bool
