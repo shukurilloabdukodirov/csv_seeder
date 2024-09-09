@@ -97,11 +97,11 @@ You can run the CSV import via the command line by using the `ImportData` comman
 - **Normal Mode**:
 
   ```bash
-  php artisan import:data
+  php artisan import:stock
 - **Test Mode**:
 
   ```bash
-  php artisan import:data test
+  php artisan import:stock test
 
 ### Result
 ![img.png](img.png)
